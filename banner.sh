@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "╔══════════════════════════════════════╗"
+echo "║   🦇  DARKKNIGHT VPS CLOUD  🦇       ║"
+echo "╠══════════════════════════════════════╣"
+echo "║  🖥  OS  : Ubuntu 24.04 LTS"
+echo "║  🌐  IP  : $(curl -s -m 5 ifconfig.me 2>/dev/null || echo -)"
+echo "║  🧠  RAM : $(free -m | awk '/Mem:/{print $3"MB / "$2"MB"}')"
+echo "║  💾  Disk: $(df -h / | awk 'NR==2{print $3" / "$2}')"
+echo "║  ⏱  Up  : $(uptime -p 2>/dev/null || echo -)"
+echo "╚══════════════════════════════════════╝"
